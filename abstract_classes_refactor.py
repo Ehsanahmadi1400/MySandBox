@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class ListMixin:
-    def list_items(self):
+    def list_items(self, *args, **kwargs):
         raise NotImplementedError("list functionality has not been implemented")
 
 
@@ -21,26 +21,26 @@ class AbstractCustomerClient(ABC):
 
     @classmethod
     @abstractmethod
-    def create_customer(cls, **kwargs):
+    def create_customer(cls,  *args, **kwargs):
         pass
 
     @classmethod
     @abstractmethod
-    def retrieve_customer(cls, **kwargs):
+    def retrieve_customer(cls,  *args, **kwargs):
         pass
 
     @classmethod
-    def list_items(cls):
-        pass
-
-    @classmethod
-    @abstractmethod
-    def update_customer(cls, **kwargs):
+    def list_items(cls, *args, **kwargs):
         pass
 
     @classmethod
     @abstractmethod
-    def delete_customer(cls, **kwargs):
+    def update_customer(cls,  *args, **kwargs):
+        pass
+
+    @classmethod
+    @abstractmethod
+    def delete_customer(cls,  *args, **kwargs):
         pass
 
 
@@ -59,27 +59,27 @@ class AbstractMerchantClient(ABC):
 
     @classmethod
     @abstractmethod
-    def create_merchant(cls, **kwargs):
+    def create_merchant(cls,  *args, **kwargs):
         pass
 
     @classmethod
     @abstractmethod
-    def retrieve_merchant(cls, **kwargs):
+    def retrieve_merchant(cls,  *args, **kwargs):
         pass
 
 
     @classmethod
-    def list_items(cls):
-        pass
-
-    @classmethod
-    @abstractmethod
-    def update_merchant(cls, **kwargs):
+    def list_items(cls,  *args, **kwargs):
         pass
 
     @classmethod
     @abstractmethod
-    def delete_merchant(cls, **kwargs):
+    def update_merchant(cls,  *args, **kwargs):
+        pass
+
+    @classmethod
+    @abstractmethod
+    def delete_merchant(cls,  *args, **kwargs):
         pass
 
 
@@ -96,15 +96,15 @@ class AbstractTransfer(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def initiate_transfer(self, **kwargs):
+    def initiate_transfer(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_transfer(self, **kwargs):
+    def retrieve_transfer(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def cancel_transfer(self, **kwargs):
+    def cancel_transfer(self,  *args, **kwargs):
         pass
 
 
@@ -121,15 +121,15 @@ class AbstractRecurringTransfer(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def initiate_transfer(self, **kwargs):
+    def initiate_transfer(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_transfer(self, **kwargs):
+    def retrieve_transfer(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def cancel_transfer(self, **kwargs):
+    def cancel_transfer(self,  *args, **kwargs):
         pass
 
 
@@ -145,15 +145,15 @@ class AbstractPayment(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def initiate_payment(self, **kwargs):
+    def initiate_payment(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_payment(self, **kwargs):
+    def retrieve_payment(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def update_payment(self, **kwargs):
+    def update_payment(self,  *args, **kwargs):
         pass
 
 
@@ -169,15 +169,15 @@ class AbstractRecurringPayment(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def initiate_payment(self, **kwargs):
+    def initiate_payment(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_payment(self, **kwargs):
+    def retrieve_payment(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def update_payment(self, **kwargs):
+    def update_payment(self,  *args, **kwargs):
         pass
 
 
@@ -192,27 +192,27 @@ class AbstractFundingSource(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def create_funding_source(self, **kwargs):
+    def create_funding_source(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def create_funding_source_manually(self, **kwargs):
+    def create_funding_source_manually(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def update_funding_source(self, **kwargs):
+    def update_funding_source(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_funding_source(self, **kwargs):
+    def retrieve_funding_source(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def get_funding_source_balance(self, **kwargs):
+    def get_funding_source_balance(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def verify_micro_deposit(self, **kwargs):
+    def verify_micro_deposit(self,  *args, **kwargs):
         pass
 
 
@@ -227,17 +227,17 @@ class AbstractWebhook(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def create_webhook(self, **kwargs):
+    def create_webhook(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_webhook(self, **kwargs):
+    def retrieve_webhook(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def update_webhook(self, **kwargs):
+    def update_webhook(self,  *args, **kwargs):
         pass
 
     @abstractmethod
-    def delete_webhook(self, **kwargs):
+    def delete_webhook(self,  *args, **kwargs):
         pass

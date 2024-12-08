@@ -3,13 +3,14 @@ import requests
 from uuid import uuid4
 from typing import Literal
 
-from .abstract_classes import *
+from MySandBox.abstract_classes import AbstractPayment, AbstractTransfer
+from abstract_classes_refactor import AbstractCustomerClient, AbstractMerchantClient
 from payment.utils import get_current_server
-from payment.utils import get_current_server, three_letter_abbreviation_of_the_country
-
+# from payment.utils import get_current_server, three_letter_abbreviation_of_the_country
+#
 from django.conf import settings
-from payment.payment_providers.abstract_classes_me import AbstractCustomerClient, AbstractMerchantClient
-from payment.payment_providers.abstract_classes_me import AbstractPayment, AbstractTransfer
+# from payment.payment_providers.abstract_classes_me import AbstractCustomerClient, AbstractMerchantClient
+# from payment.payment_providers.abstract_classes_me import AbstractPayment, AbstractTransfer
 
 
 logger = logging.getLogger(__file__)

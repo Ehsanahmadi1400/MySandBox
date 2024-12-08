@@ -21,12 +21,12 @@ class AbstractCustomerClient(ABC):
 
     @classmethod
     @abstractmethod
-    def create_customer(cls):
+    def create_customer(cls, **kwargs):
         pass
 
     @classmethod
     @abstractmethod
-    def retrieve_customer(cls, customer_id):
+    def retrieve_customer(cls, **kwargs):
         pass
 
     @classmethod
@@ -35,12 +35,12 @@ class AbstractCustomerClient(ABC):
 
     @classmethod
     @abstractmethod
-    def update_customer(cls, customer_id):
+    def update_customer(cls, **kwargs):
         pass
 
     @classmethod
     @abstractmethod
-    def delete_customer(cls, customer_id):
+    def delete_customer(cls, **kwargs):
         pass
 
 
@@ -59,12 +59,12 @@ class AbstractMerchantClient(ABC):
 
     @classmethod
     @abstractmethod
-    def create_merchant(cls):
+    def create_merchant(cls, **kwargs):
         pass
 
     @classmethod
     @abstractmethod
-    def retrieve_merchant(cls, merchant_id):
+    def retrieve_merchant(cls, **kwargs):
         pass
 
 
@@ -74,12 +74,12 @@ class AbstractMerchantClient(ABC):
 
     @classmethod
     @abstractmethod
-    def update_merchant(cls, merchant_id):
+    def update_merchant(cls, **kwargs):
         pass
 
     @classmethod
     @abstractmethod
-    def delete_merchant(cls, merchant_id):
+    def delete_merchant(cls, **kwargs):
         pass
 
 
@@ -96,15 +96,15 @@ class AbstractTransfer(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def initiate_transfer(self):
+    def initiate_transfer(self, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_transfer(self):
+    def retrieve_transfer(self, **kwargs):
         pass
 
     @abstractmethod
-    def cancel_transfer(self):
+    def cancel_transfer(self, **kwargs):
         pass
 
 
@@ -121,15 +121,15 @@ class AbstractRecurringTransfer(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def initiate_transfer(self):
+    def initiate_transfer(self, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_transfer(self):
+    def retrieve_transfer(self, **kwargs):
         pass
 
     @abstractmethod
-    def cancel_transfer(self):
+    def cancel_transfer(self, **kwargs):
         pass
 
 
@@ -145,15 +145,15 @@ class AbstractPayment(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def initiate_payment(self):
+    def initiate_payment(self, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_payment(self):
+    def retrieve_payment(self, **kwargs):
         pass
 
     @abstractmethod
-    def update_payment(self):
+    def update_payment(self, **kwargs):
         pass
 
 
@@ -169,15 +169,15 @@ class AbstractRecurringPayment(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def initiate_payment(self):
+    def initiate_payment(self, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_payment(self):
+    def retrieve_payment(self, **kwargs):
         pass
 
     @abstractmethod
-    def update_payment(self):
+    def update_payment(self, **kwargs):
         pass
 
 
@@ -192,27 +192,27 @@ class AbstractFundingSource(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def create_funding_source(self):
+    def create_funding_source(self, **kwargs):
         pass
 
     @abstractmethod
-    def create_funding_source_manually(self):
+    def create_funding_source_manually(self, **kwargs):
         pass
 
     @abstractmethod
-    def update_funding_source(self):
+    def update_funding_source(self, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_funding_source(self):
+    def retrieve_funding_source(self, **kwargs):
         pass
 
     @abstractmethod
-    def get_funding_source_balance(self):
+    def get_funding_source_balance(self, **kwargs):
         pass
 
     @abstractmethod
-    def verify_micro_deposit(self):
+    def verify_micro_deposit(self, **kwargs):
         pass
 
 
@@ -227,17 +227,17 @@ class AbstractWebhook(ABC, ListMixin):
         pass
 
     @abstractmethod
-    def create_webhook(self):
+    def create_webhook(self, **kwargs):
         pass
 
     @abstractmethod
-    def retrieve_webhook(self, webhook_id):
+    def retrieve_webhook(self, **kwargs):
         pass
 
     @abstractmethod
-    def update_webhook(self, webhook_id, webhook_status):
+    def update_webhook(self, **kwargs):
         pass
 
     @abstractmethod
-    def delete_webhook(self, webhook_id):
+    def delete_webhook(self, **kwargs):
         pass

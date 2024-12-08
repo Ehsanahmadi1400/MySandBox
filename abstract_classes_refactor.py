@@ -6,7 +6,7 @@ class ListMixin:
         raise NotImplementedError("list functionality has not been implemented")
 
 
-class AbstractCustomerClient(ABC):
+class AbstractCustomerClient(ABC, ListMixin):
     """
     Abstract class for customers
 
@@ -30,10 +30,6 @@ class AbstractCustomerClient(ABC):
         pass
 
     @classmethod
-    def list_items(cls, *args, **kwargs):
-        pass
-
-    @classmethod
     @abstractmethod
     def update_customer(cls,  *args, **kwargs):
         pass
@@ -44,7 +40,7 @@ class AbstractCustomerClient(ABC):
         pass
 
 
-class AbstractMerchantClient(ABC):
+class AbstractMerchantClient(ABC, ListMixin):
     """
     Abstract class for merchants
 
@@ -65,11 +61,6 @@ class AbstractMerchantClient(ABC):
     @classmethod
     @abstractmethod
     def retrieve_merchant(cls,  *args, **kwargs):
-        pass
-
-
-    @classmethod
-    def list_items(cls,  *args, **kwargs):
         pass
 
     @classmethod

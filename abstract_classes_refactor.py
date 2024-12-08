@@ -74,7 +74,7 @@ class AbstractMerchantClient(ABC, ListMixin):
         pass
 
 
-class AbstractTransfer(ABC, ListMixin):
+class AbstractSingleTransfer(ABC, ListMixin):
     """
     Abstract class for transfer operations:
 
@@ -124,7 +124,7 @@ class AbstractRecurringTransfer(ABC, ListMixin):
         pass
 
 
-class AbstractPayment(ABC, ListMixin):
+class AbstractSinglePayment(ABC, ListMixin):
     """
     Abstract class for payment operations:
 
